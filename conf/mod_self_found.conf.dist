@@ -1,0 +1,59 @@
+[worldserver]
+
+########################################
+# mod-self-found configuration
+########################################
+#
+# Foundation module for the WoW-Forever "Self-Found" ruleset (Kanboard #788): a
+# per-character, opt-in flag ('.selffound on') that cuts a character off from
+# every path by which gear or gold can enter from another player - trade, the
+# Auction House and outgoing mail.
+#
+# This module is the base for a later Hardcore ruleset (Kanboard #789); keep
+# its flag storage (self_found_flags, characters DB) reusable.
+#
+
+#
+#    SelfFound.Enable
+#        Master on/off switch for this module. 0 = the module loads, the
+#        '.selffound' command still exists but always reports the ruleset as
+#        disabled, and no enforcement hook blocks anything.
+#        Default: 1
+#
+SelfFound.Enable = 1
+
+#
+#    SelfFound.BlockTrade
+#        1 = a Self-Found character cannot open a trade window with, or trade
+#        items/gold with, any other character (OnPlayerCanInitTrade /
+#        OnPlayerCanSetTradeItem).
+#        Default: 1
+#
+SelfFound.BlockTrade = 1
+
+#
+#    SelfFound.BlockMail
+#        1 = a Self-Found character cannot send mail (OnPlayerCanSendMail).
+#        Note: this only blocks SENDING. See the README "Gaps" section for why
+#        RECEIVING mail is not blocked on this fork.
+#        Default: 1
+#
+SelfFound.BlockMail = 1
+
+#
+#    SelfFound.BlockAuctionHouse
+#        1 = a Self-Found character cannot open the Auction House window at all
+#        (MiscScript::CanSendAuctionHello), with OnPlayerCanPlaceAuctionBid kept
+#        as a second line of defense against a bid/buyout sent without the
+#        window.
+#        Default: 1
+#
+SelfFound.BlockAuctionHouse = 1
+
+#
+#    SelfFound.AnnounceOnLogin
+#        1 = remind a Self-Found character on login what's blocked. Skipped for
+#        bot-controlled sessions (bots don't read chat).
+#        Default: 1
+#
+SelfFound.AnnounceOnLogin = 1
