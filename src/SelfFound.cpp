@@ -80,7 +80,7 @@ namespace SelfFound
         // aborts the whole worldserver boot, so we create the table
         // programmatically and tolerate failure at runtime instead (matches
         // mod-guild-tax's approach).
-        CharacterDatabase.Execute(
+        CharacterDatabase.DirectExecute(
             "CREATE TABLE IF NOT EXISTS `self_found_flags` ("
             "`guid` INT UNSIGNED NOT NULL, "
             "`enabled` TINYINT UNSIGNED NOT NULL DEFAULT 1, "
