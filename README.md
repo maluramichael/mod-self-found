@@ -1,5 +1,10 @@
 # mod-self-found
 
+<!-- links:start -->
+[![Support me on Ko-fi](https://malura.de/assets/badge/kofi.svg)](https://malura.de/go/kofi?ref=mod-self-found)
+[![Check out my page](https://malura.de/assets/badge/malura.svg)](https://malura.de/go/site?ref=mod-self-found)
+<!-- links:end -->
+
 An [AzerothCore](https://www.azerothcore.org/) module (WotLK 3.3.5a) that adds an opt-in
 **Self-Found** ruleset: a flagged character must find its own gear — no trading, no auction
 house, no outgoing mail.
